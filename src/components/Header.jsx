@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import { FaMoon, FaSun, FaHeart, FaHome } from 'react-icons/fa';
 
 const Header = () => {
   const [darkMode, setDarkMode] = useState(
     localStorage.getItem('theme') === 'dark'
   );
+  const location = useLocation();
 
   useEffect(() => {
     if (darkMode) {
@@ -16,21 +18,44 @@ const Header = () => {
     }
   }, [darkMode]);
 
+  const navLinkClass = (path) =>
+    `flex items-center gap-1 px-3 py-2 rounded-md transition ${
+      location.pathname === path
+        ? 'bg-indigo-100 text-indigo-600 dark:bg-indigo-900 dark:text-indigo-300'
+        : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
+    }`;
+
   return (
-    <header className="bg-white dark:bg-gray-800 shadow-md py-4 px-6 flex justify-between items-center">
-      <Link to="/" className="text-xl font-bold text-indigo-600 dark:text-indigo-400">
-        🚗 CarFinder
-      </Link>
-      <nav className="space-x-4">
-        <Link to="/" className="hover:underline">Home</Link>
-        <Link to="/wishlist" className="hover:underline">Wishlist</Link>
-        <button
-          onClick={() => setDarkMode(!darkMode)}
-          className="ml-4 text-sm px-2 py-1 border rounded"
+    <header className="backdrop-blur bg-white/70 dark:bg-gray-900/80 shadow-md sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
+        {/* Logo */}
+        <Link
+          to="/"
+          className="text-2xl font-bold text-indigo-600 dark:text-indigo-400 tracking-wide flex items-center gap-1"
         >
-          {darkMode ? '☀️ Light' : '🌙 Dark'}
-        </button>
-      </nav>
+           CarFinder
+        </Link>
+
+        {/* Navigation */}
+        <nav className="flex items-center md:gap-4 gap-2 text-sm font-medium">
+          <Link to="/" className={navLinkClass('/')}>
+            <FaHome className='sm:text-2xl text-lg'/> <span className='hidden md:inline-block text-sm'>Home</span>
+          </Link>
+
+          <Link to="/wishlist" className={navLinkClass('/wishlist')}>
+            <FaHeart className='sm:text-2xl text-lg'/> <span className='hidden md:inline-block text-sm'>WishList</span>
+          </Link>
+
+          {/* Theme Toggle */}
+          <button
+            onClick={() => setDarkMode(!darkMode)}
+            className=" ml-2 "
+            // title="Toggle Theme"
+          >
+            {darkMode ? <FaSun className="text-yellow-400 sm:text-xl text-lg" /> : <FaMoon className="text-gray-800 sm:text-xl text-lg" />} 
+          </button>
+        </nav>
+      </div>
     </header>
   );
 };

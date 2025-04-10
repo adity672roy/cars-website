@@ -13,7 +13,7 @@
     "horsepower": 169,
     "features": ["Bluetooth", "Backup Camera", "Keyless Entry"],
     "owners": 1,
-    "image": "https://fakeimg.pl/500x500/cccccc"
+    "image": "https://media.zigcdn.com/media/model/2019/Sep/toyota-corolla-2020_600x400.jpg"
   },
   {
     "id": 2,
@@ -29,7 +29,7 @@
     "horsepower": 158,
     "features": ["Apple CarPlay", "Android Auto", "Lane Departure Warning"],
     "owners": 2,
-    "image": "https://fakeimg.pl/500x500/ffffff"
+    "image": "https://imgd.aeplcdn.com/1920x1080/n/cw/ec/27074/civic-exterior-right-front-three-quarter-148155.jpeg?q=80&q=80"
   },
   {
     "id": 3,
@@ -45,7 +45,7 @@
     "horsepower": 450,
     "features": ["Leather Seats", "Navigation System", "Heated Seats"],
     "owners": 1,
-    "image": "https://fakeimg.pl/500x500/ff0000"
+    "image": "https://imgd.aeplcdn.com/664x374/cw/ec/23766/Ford-Mustang-Exterior-126883.jpg?wm=0&q=80"
   },
   {
     "id": 4,
@@ -61,7 +61,7 @@
     "horsepower": 170,
     "features": ["Rearview Camera", "Blind-Spot Monitoring", "Wi-Fi Hotspot"],
     "owners": 2,
-    "image": "https://fakeimg.pl/500x500/0000ff"
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwti2wYrLlbJExUoJp7Q8385FHdODeDMnoMg&s"
   },
   {
     "id": 5,
@@ -81,7 +81,7 @@
       "Lane Keeping Assist"
     ],
     "owners": 1,
-    "image": "https://fakeimg.pl/500x500/000000"
+    "image": "https://i.redd.it/qscs0yd3l1t71.png"
   },
   {
     "id": 6,
@@ -97,7 +97,7 @@
     "horsepower": 255,
     "features": ["Sunroof", "Adaptive Cruise Control", "Parking Assistance"],
     "owners": 1,
-    "image": "https://fakeimg.pl/500x500/ffffff"
+    "image": "https://www.bmw.in/content/dam/bmw/marketIN/bmw_in/all-models/3-series/gl/2023/navigation.png"
   },
   {
     "id": 7,
@@ -117,7 +117,7 @@
       "Premium Audio System"
     ],
     "owners": 1,
-    "image": "https://fakeimg.pl/500x500/ff0000"
+    "image": "https://imgd.aeplcdn.com/664x374/n/cw/ec/37138/model-3-exterior-right-front-three-quarter.jpeg?isig=0&q=80"
   },
   {
     "id": 8,
@@ -133,7 +133,7 @@
     "horsepower": 248,
     "features": ["Virtual Cockpit", "Panoramic Sunroof", "Apple CarPlay"],
     "owners": 1,
-    "image": "https://fakeimg.pl/500x500/808080"
+    "image": "https://imgd.aeplcdn.com/1920x1080/n/cw/ec/53591/q5-exterior-right-front-three-quarter-36.jpeg?isig=0&q=80&q=80"
   },
   {
     "id": 9,
@@ -153,7 +153,7 @@
       "Air Suspension"
     ],
     "owners": 2,
-    "image": "https://fakeimg.pl/500x500/cccccc"
+    "image": "https://www.mercedes-benz.co.in/content/dam/hq/passengercars/cars/e-class/e-class-saloon-w214-pi/modeloverview/02-2023/images/mercedes-benz-e-class-w214-modeloverview-696x392-02-2023.jpg"
   },
   {
     "id": 10,
@@ -169,7 +169,7 @@
     "horsepower": 355,
     "features": ["Leather Seats", "Third-Row Seating", "Power Liftgate"],
     "owners": 2,
-    "image": "https://fakeimg.pl/500x500/000000"
+    "image": "https://di-uploads-pod25.dealerinspire.com/rickhendrickcitychevy/uploads/2023/11/mlp-img-top-2024-tahoe.png"
   },
   {
     "id": 11,
@@ -185,7 +185,7 @@
     "horsepower": 182,
     "features": ["All-Wheel Drive", "Roof Rails", "Adaptive Cruise Control"],
     "owners": 1,
-    "image": "https://fakeimg.pl/500x500/008000"
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtbBLLUnYdJvqk8EwlvSiZ1PzZOagG48rWPw&s"
   },
   {
     "id": 12,
@@ -205,7 +205,7 @@
       "Mark Levinson Audio"
     ],
     "owners": 1,
-    "image": "https://fakeimg.pl/500x500/ffffff"
+    "image": "https://imgd.aeplcdn.com/1056x594/n/9uf9jab_1657987.jpg?q=80"
   },
   {
     "id": 13,
@@ -221,7 +221,7 @@
     "horsepower": 375,
     "features": ["Towing Package", "Off-Road Package", "Sync 3 Infotainment"],
     "owners": 1,
-    "image": "https://fakeimg.pl/500x500/0000ff"
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTK_PRymHnqG4RnprO9boHnlZGF3O2ceUZgw&s"
   },
   {
     "id": 14,
@@ -237,7 +237,7 @@
     "horsepower": 335,
     "features": ["Heated Seats", "Wireless Charging", "Gesture Control"],
     "owners": 1,
-    "image": "https://fakeimg.pl/500x500/000000"
+    "image": "https://imgd.aeplcdn.com/1920x1080/n/cw/ec/152681/x5-exterior-right-front-three-quarter-5.jpeg?isig=0&q=80&q=80"
   },
   {
     "id": 15,
@@ -257,7 +257,7 @@
       "Apple CarPlay"
     ],
     "owners": 2,
-    "image": "https://fakeimg.pl/500x500/cccccc"
+    "image": "https://imgd.aeplcdn.com/664x374/n/cw/ec/34457/cr-v-exterior-right-front-three-quarter.jpeg?q=80"
   },
   {
     "id": 16,
@@ -277,7 +277,7 @@
       "Apple CarPlay"
     ],
     "owners": 1,
-    "image": "https://fakeimg.pl/500x500/ffffff"
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPZuapt9cVaNacbxS0FSuoSCspomWJGEyHDw&s"
   },
   {
     "id": 17,
@@ -293,7 +293,7 @@
     "horsepower": 384,
     "features": ["Autopilot", "Premium Interior", "Panoramic Roof"],
     "owners": 1,
-    "image": "https://fakeimg.pl/500x500/ff0000"
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg1nVav2KWpz7HlvLQ5fTNN4d-W-Yjs3DAfA&s"
   },
   {
     "id": 18,
@@ -309,7 +309,7 @@
     "horsepower": 355,
     "features": ["Towing Package", "Trailer Brake Controller", "Apple CarPlay"],
     "owners": 2,
-    "image": "https://fakeimg.pl/500x500/000000"
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd5bOTIOOe-toYn6ODJTlJ_5zLOij6KkGxpw&s"
   },
   {
     "id": 19,
@@ -325,7 +325,7 @@
     "horsepower": 181,
     "features": ["Apple CarPlay", "Android Auto", "Blind-Spot Monitoring"],
     "owners": 1,
-    "image": "https://fakeimg.pl/500x500/808080"
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJuIhL4tDdlCBUaRSOnq3ogmJGkZzJy7bykg&s"
   },
   {
     "id": 20,
@@ -345,7 +345,7 @@
       "Adaptive Cruise Control"
     ],
     "owners": 2,
-    "image": "https://fakeimg.pl/500x500/cccccc"
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTs8pUO8uo8kx5hlY2oIHJwkbcgeE8AXII3dw&s"
   },
   {
     "id": 21,
@@ -361,7 +361,7 @@
     "horsepower": 255,
     "features": ["Head-Up Display", "Wireless Charging", "Parking Assistance"],
     "owners": 1,
-    "image": "https://fakeimg.pl/500x500/0000ff"
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWDnm8haFj6KTnx06sUwmddDXWsWEDsL_u5g&s"
   },
   {
     "id": 22,
@@ -381,7 +381,7 @@
       "Wireless Phone Charger"
     ],
     "owners": 1,
-    "image": "https://fakeimg.pl/500x500/000000"
+    "image": "https://stimg.cardekho.com/car-images/carexteriorimages/large/Honda/Honda-Accord/front-left-side-047.jpg"
   },
   {
     "id": 23,
@@ -397,7 +397,7 @@
     "horsepower": 295,
     "features": ["4WD", "Uconnect Infotainment", "Heated Seats"],
     "owners": 1,
-    "image": "https://fakeimg.pl/500x500/ffffff"
+    "image": "https://imgd.aeplcdn.com/642x336/n/cw/ec/132711/grand-cherokee-exterior-right-front-three-quarter.jpeg?isig=0&q=80"
   },
   {
     "id": 24,
@@ -417,7 +417,7 @@
       "Smart Key System"
     ],
     "owners": 2,
-    "image": "https://fakeimg.pl/500x500/cccccc"
+    "image": "https://platform.cstatic-images.com/xlarge/in/v2/stock_photos/2712b6ce-fbeb-4dcd-ba88-9656a4398f54/29ca9875-bbb6-4d92-9260-32880e1d6616.png"
   },
   {
     "id": 25,
@@ -437,94 +437,6 @@
       "Power Liftgate"
     ],
     "owners": 1,
-    "image": "https://fakeimg.pl/500x500/0000ff"
-  },
-  {
-    "id": 26,
-    "make": "Chevrolet",
-    "model": "Camaro",
-    "year": 2021,
-    "color": "Red",
-    "mileage": 8000,
-    "price": 40000,
-    "fuelType": "Gasoline",
-    "transmission": "Automatic",
-    "engine": "6.2L V8",
-    "horsepower": 455,
-    "features": ["RS Package", "Wireless Apple CarPlay", "Bose Premium Audio"],
-    "owners": 1,
-    "image": "https://fakeimg.pl/500x500/ff0000"
-  },
-  {
-    "id": 27,
-    "make": "Audi",
-    "model": "A4",
-    "year": 2020,
-    "color": "White",
-    "mileage": 15000,
-    "price": 36000,
-    "fuelType": "Gasoline",
-    "transmission": "Automatic",
-    "engine": "2.0L 4-cylinder",
-    "horsepower": 201,
-    "features": ["Virtual Cockpit", "Panoramic Sunroof", "Audi Pre Sense City"],
-    "owners": 2,
-    "image": "https://fakeimg.pl/500x500/ffffff"
-  },
-  {
-    "id": 28,
-    "make": "Subaru",
-    "model": "Forester",
-    "year": 2022,
-    "color": "Green",
-    "mileage": 5000,
-    "price": 32000,
-    "fuelType": "Gasoline",
-    "transmission": "CVT",
-    "engine": "2.5L 4-cylinder",
-    "horsepower": 182,
-    "features": [
-      "Subaru EyeSight",
-      "X-Mode Terrain Selection",
-      "Starlink Infotainment"
-    ],
-    "owners": 1,
-    "image": "https://fakeimg.pl/500x500/008000"
-  },
-  {
-    "id": 29,
-    "make": "Ford",
-    "model": "Fusion",
-    "year": 2022,
-    "color": "Silver",
-    "mileage": 8000,
-    "price": 30000,
-    "fuelType": "Gasoline",
-    "transmission": "Automatic",
-    "engine": "2.0L 4-cylinder",
-    "horsepower": 245,
-    "features": [
-      "Ford Co-Pilot360",
-      "Adaptive Cruise Control",
-      "Wireless Charging"
-    ],
-    "owners": 1,
-    "image": "https://fakeimg.pl/500x500/cccccc"
-  },
-  {
-    "id": 30,
-    "make": "Kia",
-    "model": "Telluride",
-    "year": 2021,
-    "color": "White",
-    "mileage": 10000,
-    "price": 38000,
-    "fuelType": "Gasoline",
-    "transmission": "Automatic",
-    "engine": "3.8L V6",
-    "horsepower": 291,
-    "features": ["Kia Drive Wise", "UVO Link Infotainment", "Apple CarPlay"],
-    "owners": 1,
-    "image": "https://fakeimg.pl/500x500/ffffff"
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKr765fi5rAW9Bz9N5EEy7s-C_7tJ11F568Q&s"
   }
 ]
