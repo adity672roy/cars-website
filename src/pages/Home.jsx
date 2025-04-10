@@ -50,8 +50,11 @@ export default function Home() {
   if (loading) return <div className="p-6 text-center">Loading cars...</div>;
 
   return (
-    <div className="p-4 max-w-6xl mx-auto">
+    <div className="p-4 max-w-6xl mx-auto relative">
+      <div className='absolute top-3 right-2'>
+
       <FilterBar filters={filters} setFilters={setFilters} />
+      </div>
       {carsToShow.length === 0 ? (
         <p className="text-center text-gray-500">No cars match your filters.</p>
       ) : (

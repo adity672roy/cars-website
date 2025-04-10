@@ -28,7 +28,7 @@ const Header = () => {
   return (
     <header className="backdrop-blur bg-white/70 dark:bg-gray-900/80 shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
-        {/* Logo */}
+         
         <Link
           to="/"
           className="text-2xl font-bold text-indigo-600 dark:text-indigo-400 tracking-wide flex items-center gap-1"
@@ -36,7 +36,7 @@ const Header = () => {
            CarFinder
         </Link>
 
-        {/* Navigation */}
+      
         <nav className="flex items-center md:gap-4 gap-2 text-sm font-medium">
           <Link to="/" className={navLinkClass('/')}>
             <FaHome className='sm:text-2xl text-lg'/> <span className='hidden md:inline-block text-sm'>Home</span>
@@ -46,11 +46,11 @@ const Header = () => {
             <FaHeart className='sm:text-2xl text-lg'/> <span className='hidden md:inline-block text-sm'>WishList</span>
           </Link>
 
-          {/* Theme Toggle */}
+          
           <button
             onClick={() => setDarkMode(!darkMode)}
             className=" ml-2 "
-            // title="Toggle Theme"
+          
           >
             {darkMode ? <FaSun className="text-yellow-400 sm:text-xl text-lg" /> : <FaMoon className="text-gray-800 sm:text-xl text-lg" />} 
           </button>

@@ -5,12 +5,12 @@ import { FaGasPump, FaCogs, FaHeart, FaRegHeart } from 'react-icons/fa';
 export default function CarCard({ car, toggleWishlist, isWished }) {
   return (
     <div className="bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition duration-300">
-      {/* Image */}
-      <div className="relative">
+      
+      <div className="relative bg-white">
         <img
           src={car.image}
           alt={`${car.make} ${car.model}`}
-          className="w-full h-48 object-cover"
+          className="w-full h-48 object-contain"
         />
         <button
           onClick={() => toggleWishlist(car)}
@@ -21,7 +21,7 @@ export default function CarCard({ car, toggleWishlist, isWished }) {
         </button>
       </div>
 
-      {/* Details */}
+  
       <div className="p-4">
         <h2 className="text-lg font-semibold mb-1">
           {car.make} {car.model}

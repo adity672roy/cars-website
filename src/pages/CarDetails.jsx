@@ -21,8 +21,7 @@ export default function CarDetails() {
         const data = await response.json();
         const found = data.find((c) => c.id.toString() === id);
         setCar(found);
-
-        // Check wishlist status from localStorage
+ 
         const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
         if (found && wishlist.some((item) => item.id === found.id)) {
           setIsWished(true);
@@ -52,18 +51,17 @@ export default function CarDetails() {
 
   return (
     <div className="max-w-6xl mx-auto p-4 sm:p-6 md:p-10 bg-white dark:bg-gray-900 rounded-xl shadow-lg mt-6">
-      {/* Banner */}
-      <div className="relative">
+ 
+      <div className="relative bg-white">
         <img
           src={car.image}
           alt={`${car.make} ${car.model}`}
-          className="w-full h-[400px] object-cover rounded-xl shadow"
+          className="w-full h-[400px] object-contain rounded-xl shadow"
         />
         <div className="absolute bottom-4 left-4 bg-black/70 text-white px-4 py-2 rounded-lg text-xl font-semibold">
           {car.make} {car.model} <span className="text-sm text-gray-300">({car.year})</span>
         </div>
-
-        {/* Wishlist Button */}
+ 
         <button
           onClick={toggleWishlist}
           className="absolute top-4 right-4 bg-white/80 dark:bg-gray-800/70 p-2 rounded-full text-red-500 hover:scale-110 transition"
@@ -72,8 +70,7 @@ export default function CarDetails() {
           {isWished ? <FaHeart size={20} /> : <FaRegHeart size={20} />}
         </button>
       </div>
-
-      {/* Info Section */}
+ 
       <div className="mt-8 grid md:grid-cols-3 gap-6">
         <div className="md:col-span-2">
           <h2 className="text-2xl font-bold mb-4">Overview</h2>
@@ -97,7 +94,6 @@ export default function CarDetails() {
           </button>
         </div>
 
-        {/* Price Highlight */}
         <div className="bg-indigo-50 dark:bg-indigo-900 rounded-lg p-6 shadow text-center">
           <p className="text-gray-500 text-sm mb-1">Ex-showroom Price</p>
           <p className="text-3xl font-bold text-indigo-700 dark:text-white">
@@ -107,7 +103,6 @@ export default function CarDetails() {
         </div>
       </div>
 
-      {/* Features */}
       <div className="mt-10">
         <h2 className="text-2xl font-bold mb-4 border-b pb-2">Key Features</h2>
         <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 text-sm text-gray-700 dark:text-gray-300">

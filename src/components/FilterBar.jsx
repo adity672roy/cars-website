@@ -14,7 +14,7 @@ export default function FilterBar({ filters, setFilters }) {
 
   return (
     <>
-      {/* Desktop Filter Bar */}
+    
       <div className="hidden md:grid bg-white dark:bg-gray-800 p-4 rounded-lg shadow mb-6 grid-cols-4 gap-4">
         <input
           type="text"
@@ -46,26 +46,26 @@ export default function FilterBar({ filters, setFilters }) {
         </button>
       </div>
 
-      {/* Mobile Filter Toggle Button */}
+     
       <div className="md:hidden flex justify-end mb-4">
         <button
           onClick={() => setShowMobileFilters(true)}
-          className="flex items-center gap-2 px-4 py-2 bg-indigo-600 text-white rounded shadow"
+          className="flex items-center gap-2 px-3 py-1 bg-indigo-600 text-white rounded shadow"
         >
           <FaFilter /> Filters
         </button>
       </div>
 
-      {/* Mobile Slide-in Filter Drawer */}
+      
       {showMobileFilters && (
         <div className="fixed inset-0 z-50 flex">
-          {/* Overlay */}
+         
           <div
             className="fixed inset-0 bg-black bg-opacity-50"
             onClick={() => setShowMobileFilters(false)}
           ></div>
 
-          {/* Sidebar */}
+     
           <div className="relative bg-white dark:bg-gray-900 w-72 h-full p-5 shadow-lg transition-transform duration-300">
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-lg font-semibold text-gray-800 dark:text-white">Filters</h2>
