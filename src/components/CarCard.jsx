@@ -1,37 +1,26 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+// File: src/components/CarCard.jsx
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-export default function CarCard({ car }) {
-  const navigate = useNavigate();
-  const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
-
-  const toggleWishlist = () => {
-    const exists = wishlist.some((c) => c.id === car.id);
-    const updated = exists
-      ? wishlist.filter((c) => c.id !== car.id)
-      : [...wishlist, car];
-    localStorage.setItem("wishlist", JSON.stringify(updated));
-    window.dispatchEvent(new Event("wishlistUpdated"));
-  };
-
+export default function CarCard({ car, toggleWishlist, isWished }) {
   return (
-    <div className="bg-white dark:bg-gray-800 shadow rounded p-4">
-      <img src={car.image_url || "https://via.placeholder.com/300x150"} alt={car.model} className="w-full h-40 object-cover" />
-      <h2 className="text-lg font-bold mt-2 dark:text-white">{car.model}</h2>
-      <p className="text-sm dark:text-gray-300">{car.make} | {car.fuel_type}</p>
-      <p className="text-sm dark:text-gray-300">₹{car.price?.toLocaleString() || 'N/A'}</p>
-      <div className="flex justify-between mt-3">
-        <button
-          className="text-blue-500"
-          onClick={() => navigate(`/car/${car.id}`)}
+    <div className="bg-white dark:bg-gray-800 rounded-xl shadow p-4 transition hover:shadow-lg">
+      <img src={car.image} alt={`${car.make} ${car.model}`} className="rounded w-full h-48 object-cover" />
+      <h2 className="mt-2 font-semibold text-lg">{car.make} {car.model}</h2>
+      <p className="text-sm text-gray-600 dark:text-gray-300">{car.year} • {car.fuelType} • {car.transmission}</p>
+      <p className="mt-1 font-bold text-indigo-600 dark:text-indigo-300">${car.price}</p>
+      <div className="flex justify-between items-center mt-3">
+        <Link
+          to={`/car/${car.id}`}
+          className="text-blue-500 hover:underline text-sm"
         >
           View Details
-        </button>
+        </Link>
         <button
-          className="text-red-500"
-          onClick={toggleWishlist}
+          onClick={() => toggleWishlist(car)}
+          className="text-red-500 text-xl"
         >
-          ❤️
+          {isWished ? '❤️' : '🤍'}
         </button>
       </div>
     </div>

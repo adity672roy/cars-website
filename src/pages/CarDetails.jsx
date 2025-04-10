@@ -1,26 +1,37 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+// File: src/pages/CarDetails.jsx
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 
 export default function CarDetails() {
   const { id } = useParams();
   const [car, setCar] = useState(null);
 
   useEffect(() => {
-    fetch("https://freetestapi.com/api/v1/cars")
-      .then((res) => res.json())
-      .then((data) => setCar(data.find((c) => c.id === +id)));
+    const fetchCar = async () => {
+      try {
+        const response = await fetch('/cars.json');
+        const data = await response.json();
+        const found = data.find((c) => c.id.toString() === id);
+        setCar(found);
+      } catch (error) {
+        console.error('Error loading car details:', error);
+      }
+    };
+
+    fetchCar();
   }, [id]);
 
-  if (!car) return <p className="p-4">Loading...</p>;
+  if (!car) return <p className="p-6">Loading car details...</p>;
 
   return (
-    <div className="p-4">
-      <img src={car.image_url || "https://via.placeholder.com/500x300"} alt={car.model} className="w-full max-w-md mx-auto" />
-      <h1 className="text-2xl font-bold mt-4 dark:text-white">{car.model}</h1>
-      <p className="dark:text-gray-300">Brand: {car.make}</p>
-      <p className="dark:text-gray-300">Fuel Type: {car.fuel_type}</p>
-      <p className="dark:text-gray-300">Seating Capacity: {car.seating_capacity || "N/A"}</p>
-      <p className="dark:text-gray-300">Price: ₹{car.price?.toLocaleString() || "N/A"}</p>
+    <div className="p-6 max-w-4xl mx-auto bg-white dark:bg-gray-800 rounded shadow">
+      <img src={car.image} alt={car.make} className="w-full h-80 object-cover rounded" />
+      <h1 className="text-2xl font-bold mt-4">{car.make} {car.model} ({car.year})</h1>
+      <p className="text-gray-600 dark:text-gray-300 mt-1">{car.color} • {car.transmission} • {car.fuelType}</p>
+      <p className="mt-2 font-bold text-indigo-600 dark:text-indigo-400">${car.price}</p>
+      <ul className="mt-4 list-disc pl-6">
+        {car.features.map((f, idx) => <li key={idx}>{f}</li>)}
+      </ul>
     </div>
   );
 }

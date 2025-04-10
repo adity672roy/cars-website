@@ -1,20 +1,26 @@
+// File: src/components/Pagination.jsx
 import React from "react";
 
-export default function Pagination({ total, page, setPage }) {
-  const pages = Math.ceil(total / 10);
+export default function Pagination({ currentPage, totalPages, setPage }) {
   return (
-    <div className="flex justify-center gap-2 mt-4">
-      {[...Array(pages)].map((_, idx) => (
-        <button
-          key={idx}
-          className={`px-3 py-1 rounded ${
-            idx + 1 === page ? "bg-blue-500 text-white" : "bg-gray-200"
-          }`}
-          onClick={() => setPage(idx + 1)}
-        >
-          {idx + 1}
-        </button>
-      ))}
+    <div className="flex justify-center items-center gap-4 mt-4">
+      <button
+        onClick={() => setPage(currentPage - 1)}
+        disabled={currentPage === 1}
+        className="px-3 py-1 border rounded disabled:opacity-50"
+      >
+        Prev
+      </button>
+      <span>
+        {currentPage} / {totalPages}
+      </span>
+      <button
+        onClick={() => setPage(currentPage + 1)}
+        disabled={currentPage === totalPages}
+        className="px-3 py-1 border rounded disabled:opacity-50"
+      >
+        Next
+      </button>
     </div>
   );
 }

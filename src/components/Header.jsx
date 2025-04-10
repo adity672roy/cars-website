@@ -1,32 +1,39 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+// components/Header.jsx
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
-export default function Header() {
+const Header = () => {
   const [darkMode, setDarkMode] = useState(
-    localStorage.getItem("theme") === "dark"
+    localStorage.getItem('theme') === 'dark'
   );
 
   useEffect(() => {
-    document.documentElement.classList.toggle("dark", darkMode);
-    localStorage.setItem("theme", darkMode ? "dark" : "light");
+    if (darkMode) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    }
   }, [darkMode]);
 
   return (
-    <header className="bg-white dark:bg-gray-800 shadow p-4 flex justify-between">
-      <Link to="/" className="text-xl font-bold dark:text-white">
-        CarFinder
+    <header className="bg-white dark:bg-gray-800 shadow-md py-4 px-6 flex justify-between items-center">
+      <Link to="/" className="text-xl font-bold text-indigo-600 dark:text-indigo-400">
+        🚗 CarFinder
       </Link>
-      <div className="flex gap-4 items-center">
-        <Link to="/wishlist" className="text-blue-600 dark:text-blue-300">
-          Wishlist
-        </Link>
+      <nav className="space-x-4">
+        <Link to="/" className="hover:underline">Home</Link>
+        <Link to="/wishlist" className="hover:underline">Wishlist</Link>
         <button
           onClick={() => setDarkMode(!darkMode)}
-          className="bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded"
+          className="ml-4 text-sm px-2 py-1 border rounded"
         >
-          {darkMode ? "☀️" : "🌙"}
+          {darkMode ? '☀️ Light' : '🌙 Dark'}
         </button>
-      </div>
+      </nav>
     </header>
   );
-}
+};
+
+export default Header;

@@ -1,59 +1,72 @@
-import React, { useEffect, useState } from "react";
-import CarCard from "../components/CarCard";
-import Filters from "../components/Filters";
-import Pagination from "../components/Pagination";
+// File: src/pages/Home.jsx
+import React, { useEffect, useState } from 'react';
+import CarCard from '../components/CarCard';
+import FilterBar from '../components/FilterBar';
+import Pagination from '../components/Pagination';
+import { getWishlist, toggleWishlistItem } from '../utils/localStorageUtils';
 
 export default function Home() {
   const [cars, setCars] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState("");
-  const [filters, setFilters] = useState({
-    brand: "",
-    fuel: "",
-    minPrice: 0,
-    maxPrice: 100000,
-  });
+  const [filters, setFilters] = useState({ search: '', fuelType: '', sort: '' });
+  const [wishlist, setWishlist] = useState(getWishlist());
   const [page, setPage] = useState(1);
+  const perPage = 10;
 
   useEffect(() => {
-    setLoading(true);
-    fetch("https://freetestapi.com/api/v1/cars")
-      .then((res) => res.json())
-      .then((data) => {
-        const filtered = data.filter((car) => {
-          return (
-            (!filters.brand || car.make === filters.brand) &&
-            (!filters.fuel || car.fuel_type === filters.fuel) &&
-            car.price >= filters.minPrice &&
-            car.price <= filters.maxPrice
-          );
-        });
-        setCars(filtered);
+    const fetchCars = async () => {
+      try {
+        const response = await fetch('/cars.json');
+        const data = await response.json();
+        setCars(data);
         setLoading(false);
-      })
-      .catch(() => {
-        setError("Failed to fetch cars");
+      } catch (error) {
+        console.error('Error fetching cars:', error);
         setLoading(false);
-      });
-  }, [filters]);
+      }
+    };
 
-  const carsToShow = cars.slice((page - 1) * 10, page * 10);
+    fetchCars();
+  }, []);
+
+  const filteredCars = cars
+    .filter((car) =>
+      (car.make + car.model).toLowerCase().includes(filters.search.toLowerCase()) &&
+      (filters.fuelType ? car.fuelType === filters.fuelType : true)
+    )
+    .sort((a, b) =>
+      filters.sort === 'asc' ? a.price - b.price :
+      filters.sort === 'desc' ? b.price - a.price : 0
+    );
+
+  const carsToShow = filteredCars.slice((page - 1) * perPage, page * perPage);
+  const totalPages = Math.ceil(filteredCars.length / perPage);
+
+  const toggleWishlist = (car) => {
+    const updated = toggleWishlistItem(car);
+    setWishlist(updated);
+  };
+
+  if (loading) return <div className="p-6 text-center">Loading cars...</div>;
 
   return (
-    <div className="p-4">
-      <Filters filters={filters} setFilters={setFilters} />
-      {loading ? (
-        <p className="text-center mt-10">Loading...</p>
-      ) : error ? (
-        <p className="text-center text-red-500">{error}</p>
+    <div className="p-4 max-w-6xl mx-auto">
+      <FilterBar filters={filters} setFilters={setFilters} />
+      {carsToShow.length === 0 ? (
+        <p className="text-center text-gray-500">No cars match your filters.</p>
       ) : (
         <>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {carsToShow.map((car) => (
-              <CarCard key={car.id} car={car} />
+              <CarCard
+                key={car.id}
+                car={car}
+                toggleWishlist={toggleWishlist}
+                isWished={wishlist.some((w) => w.id === car.id)}
+              />
             ))}
           </div>
-          <Pagination total={cars.length} page={page} setPage={setPage} />
+          <Pagination currentPage={page} totalPages={totalPages} setPage={setPage} />
         </>
       )}
     </div>
