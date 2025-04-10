@@ -59,8 +59,8 @@ export default function Home() {
         <p className="text-center text-gray-500">No cars match your filters.</p>
       ) : (
         <>
-        <p className='text-2xl dark:text-white font-semibold mb-2'>All Cars</p>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <p className='text-2xl dark:text-white font-semibold md:my-5 mb-4'>All Cars</p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {carsToShow.map((car) => (
               <CarCard
                 key={car.id}
