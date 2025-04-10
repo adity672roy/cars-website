@@ -1,5 +1,4 @@
-// File: src/components/CarCard.jsx
-import React from 'react';
+ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function CarCard({ car, toggleWishlist, isWished }) {

@@ -1,4 +1,4 @@
-// File: src/utils/localStorageUtils.js
+ 
 export const getWishlist = () => {
     return JSON.parse(localStorage.getItem('wishlist')) || [];
   };

@@ -1,4 +1,4 @@
-// File: src/pages/Wishlist.jsx
+
 import React, { useState, useEffect } from 'react';
 import { getWishlist, toggleWishlistItem } from '../utils/localStorageUtils';
 import CarCard from '../components/CarCard';

@@ -1,4 +1,4 @@
-// File: src/components/Pagination.jsx
+
 import React from "react";
 
 export default function Pagination({ currentPage, totalPages, setPage }) {

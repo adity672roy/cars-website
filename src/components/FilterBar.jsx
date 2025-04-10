@@ -1,4 +1,3 @@
-// File: src/components/FilterBar.jsx
 import React from 'react';
 
 export default function FilterBar({ filters, setFilters }) {

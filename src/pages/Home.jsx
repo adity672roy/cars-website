@@ -1,4 +1,4 @@
-// File: src/pages/Home.jsx
+
 import React, { useEffect, useState } from 'react';
 import CarCard from '../components/CarCard';
 import FilterBar from '../components/FilterBar';
